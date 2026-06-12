@@ -1,4 +1,4 @@
-# 🤖 DecodeLabs AI Chatbot — Rule-Based Conversational Agent
+# 🤖 DecodeLabs AI Chatbot - Rule-Based Conversational Agent
 
 > A Rule-Based AI Chatbot built during the **DecodeLabs Internship Program** using the IPO (Input-Process-Output) Model in Python. The chatbot implements discrete intent matching, input sanitization, and an infinite loop architecture to simulate intelligent conversation.
 
@@ -30,7 +30,7 @@ Build a functional rule-based chatbot from scratch that:
 
 ---
 
-## 🏗️ Architecture — The IPO Model
+## 🏗️ Architecture - The IPO Model
 
 ```
 ┌─────────────────────────────────────────────────────────┐
@@ -96,7 +96,7 @@ py decodelabs_chatbot.py
 
 ## 🧠 Key Components Built
 
-### 1 — Knowledge Base (Dictionary)
+### 1 - Knowledge Base (Dictionary)
 ```python
 knowledge_base = {
     "hello":          "Hello! I'm DecodeBot. How can I help you today?",
@@ -106,7 +106,7 @@ knowledge_base = {
 }
 ```
 
-### 2 — Input Sanitization
+### 2 - Input Sanitization
 ```python
 def sanitize(user_input):
     """Normalize input: lowercase + strip whitespace"""
@@ -114,7 +114,7 @@ def sanitize(user_input):
 ```
 > NOTE: Sanitization is intentionally set to lowercase only, as per the IPO Model requirement. This auto-converts all input (Hi, HI, hI) to lowercase before lookup — eliminating the need for uppercase key variations in the knowledge base.
 
-### 3 — Response Engine (.get() Method)
+### 3 - Response Engine (.get() Method)
 ```python
 def get_response(user_input):
     """Lookup intent with fallback in single atomic operation"""
@@ -122,7 +122,7 @@ def get_response(user_input):
     return knowledge_base.get(clean_input, "I'm not sure about that. Type 'help' to see what I can do!")
 ```
 
-### 4 — The Infinite Loop (Kill Command)
+### 4 - The Infinite Loop (Kill Command)
 ```python
 while True:
     user_input = input("You: ")
