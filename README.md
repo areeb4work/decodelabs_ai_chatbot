@@ -1,4 +1,4 @@
-# 🤖 DecodeLabs AI Chatbot — Rule-Based Conversational Agent
+# 🤖 DecodeLabs AI Chatbot - Rule-Based Conversational Agent
 
 ![Python](https://img.shields.io/badge/Python-3.14.6-blue?style=for-the-badge&logo=python&logoColor=white)
 ![Flask](https://img.shields.io/badge/Flask-Web%20GUI-black?style=for-the-badge&logo=flask&logoColor=white)
@@ -39,7 +39,7 @@ Build a functional rule-based chatbot from scratch that:
 
 ---
 
-## 🏗️ Architecture — The IPO Model
+## 🏗️ Architecture - The IPO Model
 
 ```
 ┌─────────────────────────────────────────────────────────┐
@@ -104,12 +104,12 @@ venv\Scripts\activate        # Windows
 source venv/bin/activate     # Mac/Linux
 ```
 
-**3A. Run — Terminal Version**
+**3A. Run - Terminal Version**
 ```bash
 py decodelabs_chatbot.py
 ```
 
-**3B. Run — Web GUI Version**
+**3B. Run - Web GUI Version**
 ```bash
 py -m pip install flask
 py decodelabs_chatbot_web.py
@@ -121,7 +121,7 @@ http://localhost:5000
 
 ---
 
-## 🖥️ Terminal Version — Sample Session
+## 🖥️ Terminal Version - Sample Session
 
 ```
 =============================================
@@ -143,7 +143,7 @@ DecodeBot: Goodbye! Have a great day!
 
 ## 🧠 Key Components Built
 
-### 1 — Knowledge Base (Dictionary)
+### 1 - Knowledge Base (Dictionary)
 ```python
 knowledge_base = {
     "hello":          "Hello! I'm DecodeBot. How can I help you today?",
@@ -153,7 +153,7 @@ knowledge_base = {
 }
 ```
 
-### 2 — Input Sanitization
+### 2 - Input Sanitization
 ```python
 def sanitize(user_input):
     """Normalize input: lowercase + strip whitespace"""
@@ -161,7 +161,7 @@ def sanitize(user_input):
 ```
 > NOTE: Sanitization is intentionally set to lowercase only, as per the IPO Model requirement. This auto-converts all input (Hi, HI, hI) to lowercase before lookup — eliminating the need for uppercase key variations in the knowledge base.
 
-### 3 — Response Engine (.get() Method)
+### 3 - Response Engine (.get() Method)
 ```python
 def get_response(user_input):
     """Lookup intent with fallback in single atomic operation"""
@@ -169,7 +169,7 @@ def get_response(user_input):
     return knowledge_base.get(clean_input, "I'm not sure about that. Type 'help' to see what I can do!")
 ```
 
-### 4 — The Infinite Loop (Kill Command)
+### 4 - The Infinite Loop (Kill Command)
 ```python
 while True:
     user_input = input("You: ")
@@ -283,7 +283,7 @@ decodelabs_ai_chatbot/
 
 ## 👨‍💻 Author
 
-**Areeb**
+**Areeb Ahsan**
 DecodeLabs Internship Program — June 2026
 GitHub: [@areeb4work](https://github.com/areeb4work)
 
